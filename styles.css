@@ -1,14 +1,14 @@
 span[class~="sr-only"] {
-    width: 1px;
-    height: 1px;
-    border: 0;
-    clip: rect(1px, 1px, 1px, 1px);
-    clip-path: inset(50%);
-    overflow: hidden;
-    white-space: nowrap;
-    position: absolute;
-    padding: 0;
-    margin: -1px;
+    width: 1px !important;
+    height: 1px !important;
+    border: 0 !important;
+    clip: rect(1px, 1px, 1px, 1px) !important;
+    clip-path: inset(50%) !important;
+    overflow: hidden !important;
+    white-space: nowrap !important;
+    position: absolute !important;
+    padding: 0 !important;
+    margin: -1px !important;
 }
 
 html {
@@ -40,3 +40,113 @@ h1 .flex span:last-of-type {
     font-size: 1.2em;
 }
 
+section {
+    max-width: 40rem;
+    margin: 0 auto;
+    border: 2px solid #D0D0D5;
+}
+
+#years {
+    display: flex;
+    justify-content: flex-end;
+    position: sticky;
+    top: 0;
+    margin: 0 -2px;
+    padding: 0.5rem calc(1.25rem + 2px) 0.5rem 0;
+    z-index: 999;
+    background-color: #0A0A23;
+    color: #FFF;
+}
+
+#years span[class] {
+    width: 4.5rem;
+    font-weight: bold;
+    text-align: right;
+}
+
+.table-wrap {
+    padding: 0 0.75rem 1.5rem 0.75rem;
+}
+
+
+table {
+    width: 100%;
+    margin-top: 3rem;
+    position: relative;
+    border-collapse: collapse;
+    border: 0;
+}
+
+table caption {
+    position: absolute;
+    top: -2.25rem;
+    left: 0.5rem;
+    color: #356EAF;
+    font-size: 1.3em;
+    font-weight: normal;
+}
+
+tbody td {
+    width: 100vw;
+    min-width: 4rem;
+    max-width: 4rem;
+}
+
+tbody th {
+    width: calc(100% - 12rem);
+}
+
+tr[class="total"] {
+    border-bottom: 4px double #0A0A23;
+    font-weight: bold;
+}
+
+tr[class="total"] th {
+    padding: 0.5rem 0 0.25rem 0.5rem;
+    text-align: left;
+}
+
+tr.total td {
+    text-align: right;
+    padding: 0 0.25rem;
+}
+
+tr.total td:nth-of-type(3) {
+    padding-right: 0.5rem;
+}
+
+tr.total:hover {
+    background-color: #99C9FF;
+}
+
+td.current {
+    font-style: italic;
+}
+
+tr.data {
+    background-image: linear-gradient(to bottom, #DFDFE2 1.845rem, white 1.845rem);
+}
+
+tr.data th {
+    padding-top: 0.3rem;
+    padding-left: 0.5rem;
+    text-align: left;
+}
+
+tr.data th .description {
+    display: block;
+    padding: 1rem 0 0.75rem;
+    margin-right: -13.5rem;
+    font-weight: normal;
+    font-style: italic;
+}
+
+tr.data td {
+    vertical-align: top;
+    text-align: right;
+    padding: 0.3rem 0.25rem 0;
+}
+
+tr.data td:last-of-type {
+    padding-right: 0.5rem;
+}
